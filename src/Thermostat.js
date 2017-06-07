@@ -5,5 +5,11 @@ function Thermostat() {
 }
 
 Thermostat.prototype.getCurrentTemperature = function() {
-  return this.temperature;  
+  return this.temperature;
+};
+Thermostat.prototype.upTemperature = function () {
+  this.temperature += 1
+};
+Thermostat.prototype.downTemperature = function () {
+  this.temperature -= 1
 };
