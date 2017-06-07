@@ -1,3 +1,5 @@
+'use strict';
+
 describe('Feature test', function() {
     var thermostat;
     
@@ -10,7 +12,7 @@ describe('Feature test', function() {
     describe('Thermostat ', function() {
     
         it('starts at 20C', function() {
-            expect(thermostat.temperature()).toEqual(20);
+            expect(thermostat.getCurrentTemperature()).toEqual(20);
         });
     });
     
