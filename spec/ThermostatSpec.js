@@ -22,6 +22,7 @@ describe('Thermostat', function() {
     expect(thermostat.getCurrentTemperature()).toEqual(20);
   })
 
+    
   describe('Power saving mode ON: ', function() {
     it('has a max.temperature of 25C', function() {
       thermostat.turnPowerSavingOn();
@@ -42,6 +43,34 @@ describe('Thermostat', function() {
 
   });
 
+    describe('check energy usage', function() {
+        
+    it('returns low usage under 18C', function() {
+      for(var i=0; i < 3; i++ ) {
+        thermostat.downTemperature();
+      }
+      expect(thermostat.getCurrentEnergyUsage()).toEqual("low");
+    });
+        
+    it('returns high usage above 25C', function() {
+      for(var i=0; i < 6; i++ ) {
+        thermostat.upTemperature();
+      }
+      expect(thermostat.getCurrentEnergyUsage()).toEqual("high");
+    });
+        
+    it('returns medium usage between 18C and 25C', function() {
+      for(var i=0; i < 2; i++ ) {
+        thermostat.downTemperature();
+      }
+      expect(thermostat.getCurrentEnergyUsage()).toEqual("medium");
+      for(var i=0; i < 7; i++ ) {
+        thermostat.upTemperature();
+      }
+      expect(thermostat.getCurrentEnergyUsage()).toEqual("medium"); 
+    });
 
+  });
+    
 
 });
