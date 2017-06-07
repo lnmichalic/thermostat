@@ -29,15 +29,7 @@ $(document).ready(function(){
 
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature);
-    if(thermostat.getCurrentEnergyUsage() === 'low') {
-      $('#temperature').css('color', 'green')
-    }
-     else if(thermostat.getCurrentEnergyUsage() === 'medium') {
-      $('#temperature').css('color', 'black')
-    }
-    else {
-      $('#temperature').css('color', 'red')
-    }
+    $('#temperature').attr('class', thermostat.getCurrentEnergyUsage());
   }
 
 
