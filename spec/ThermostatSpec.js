@@ -17,6 +17,11 @@ describe('Thermostat', function() {
     expect(thermostat.powerSavingModeOn).toBe(true);
   });
 
+  it('reset temperature to default value', function(){
+    thermostat.reset();
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
+  })
+
   describe('Power saving mode ON: ', function() {
     it('has a max.temperature of 25C', function() {
       thermostat.turnPowerSavingOn();
@@ -36,5 +41,7 @@ describe('Thermostat', function() {
     });
 
   });
+
+
 
 });
