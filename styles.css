@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+h1 {
+  font-family: 'Fugaz One';
+}
+
+p {
+  font-family: 'Noto Sans';
+}
+
+button {
+  background-color: Gainsboro;
+  border-radius: 15px;
+  border-style: groove;
+}
+
+.middlestuff {
+  text-align: center;
+  background-color: rgba(220, 220, 220, 0.5);
+  margin-top: 20%;
+}

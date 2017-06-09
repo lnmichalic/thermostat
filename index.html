@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <title>Thermostat</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="src/interface.js"></script>
     <script type="text/javascript" src="src/Thermostat.js"></script>
-    <link rel="stylesheet" type="text/css" href="style/style.css">
   </head>
   <body>
 
+<div class=middlestuff>
 <section>
-    <h1></span>Current Temperature: <span id="current-temperature"></span>ºC</h1>
+    <h1>Current Temperature: <span id="current-temperature"></span>ºC</h1>
+    <span id="current-city-pic"></span>
     <select id="current-city">
       <option value="london" name="London">London</option>
       <option value="newyork"name="New York">New York</option>
@@ -30,10 +32,11 @@
     <button id="temperature-up">+</button>
     <button id="temperature-down">-</button>
     <button id="temperature-reset">reset</button><br>
-    power saving mode is: <span id="power-saving-status">on</span><br>
+    <p>power saving mode is: <span id="power-saving-status">on</span></p>
     <button id="powersaving-on">PSM on</button>
     <button id="powersaving-off">PSM off</button>
   </div>
 </section>
+</div>
   </body>
 </html>
